@@ -9,11 +9,19 @@ import org.jb.vo.FamilyInfo;
 
 @Path("service")
 @Produces(MediaType.APPLICATION_JSON)
-public class RestServices extends JaxRsActivator {
+public class RestServices  {
 	
 	@GET
 	@Path("names")
-	public FamilyInfo printNames(){
+	public String printNames(){
+		FamilyInfo family = new FamilyInfo();
+		family.setAddress("38 Sienna Crt, Timberlea");
+		return "jobin";
+	}
+	
+	@GET
+	@Path("family")
+	public FamilyInfo getFamilyInfo(){
 		FamilyInfo family = new FamilyInfo();
 		family.setAddress("38 Sienna Crt, Timberlea");
 		return family;
