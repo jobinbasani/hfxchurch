@@ -21,14 +21,19 @@
 	</pluginRepositories>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
         <jaxrs.version>2.0.1</jaxrs.version>
         <spring.version>4.3.1.RELEASE</spring.version>
         <jackson.version>2.8.0</jackson.version>
         <hibernate.version>5.2.1.Final</hibernate.version>
 	</properties>
 	<dependencies>
+		<dependency>
+		    <groupId>org.javassist</groupId>
+		    <artifactId>javassist</artifactId>
+		    <version>3.17.1-GA</version>
+		</dependency>
 		<dependency>
 		    <groupId>org.apache.commons</groupId>
 		    <artifactId>commons-lang3</artifactId>
