@@ -1,6 +1,7 @@
 package org.jb.test.services;
 
 import org.jb.config.AppConfig;
+import org.jb.service.FamilyService;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +51,10 @@ public abstract class BaseTestCase {
                 andExpect(status().isOk())
                 .andReturn();
         return result.getResponse().getContentAsString();
+    }
+
+    protected FamilyService getFamilyService(){
+        return wac.getBean(FamilyService.class);
     }
 
 }

@@ -1,11 +1,7 @@
 package org.jb.data.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "family")
@@ -17,6 +13,8 @@ public class Family {
     private Integer id;
     private String address;
     private String notes;
+    @OneToMany(mappedBy = "family", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Members> membersList;
 
     public String getAddress() {
         return address;
@@ -44,7 +42,17 @@ public class Family {
 
     @Override
     public String toString() {
-        return "Family ID=" + id;
+        return "Family{" +
+                "id=" + id +
+                '}';
     }
 
+
+    public List<Members> getMembersList() {
+        return membersList;
+    }
+
+    public void setMembersList(List<Members> membersList) {
+        this.membersList = membersList;
+    }
 }
