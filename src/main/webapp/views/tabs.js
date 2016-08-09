@@ -1,12 +1,14 @@
 define([
   "views/dashboard",
   "views/members",
-  "views/reports"
-],function(dashboard, members, reports){
+  "views/reports",
+  "views/events"
+],function(dashboard, members, reports, events){
 
   var cells = [
               dashboard.config,
               members.config,
+              events.config,
               reports.config
           ];
 

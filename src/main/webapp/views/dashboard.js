@@ -1,6 +1,6 @@
 define([],function(){
 
-  var dashboardConfig = { header:"<span class='webix_icon fa-film'></span>List", body:{
+  var dashboardConfig = { header:"<span class='webix_icon fa-film'></span>Dashboard", body:{
       view:"list",
       template:"#rank#. #title# <div style='padding-left:18px'> Year:#year#, votes:#votes# </div>",
       type:{
